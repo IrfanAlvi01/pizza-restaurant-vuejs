@@ -51,7 +51,13 @@
                 <div class="p-3">
                   <h5 class="item-name">{{item.name}}</h5>
                   <h6 class="item-price">{{item.price}}</h6>
-                  <button type="button" class="add-cart">Add to Cart</button>
+                  <button
+                    @click="addPizza(item.id)"
+                    type="button"
+                    class="add-cart"
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -74,8 +80,17 @@
               <div class="order-item-content">
                 <h5>{{item.name}} - ${{item.price.toFixed(2)}}</h5>
                 <p>
-                  <button type="button" class="add">+</button>
-                  <button type="button" class="remove">-</button>
+                  <button @click="addItem(item.id)" type="button" class="add">
+                    +
+                  </button>
+                  {{item.quantity}}
+                  <button
+                    @click="reduceItem(item.id)"
+                    type="button"
+                    class="remove"
+                  >
+                    -
+                  </button>
                 </p>
                 <div class="order-item-details">
                   <span> <strong>Calarios: </strong> {{item.calories}} </span>
@@ -83,7 +98,13 @@
                   <span> <strong>Fats: </strong> {{item.fats}} </span>
                 </div>
               </div>
-              <button type="button" class="remove-icon">x</button>
+              <button
+                @click="removeItem(item.id)"
+                type="button"
+                class="remove-icon"
+              >
+                x
+              </button>
             </div>
           </div>
           <div class="cart-empty" v-else>
@@ -92,7 +113,7 @@
 
           <div class="total-section">
             <h6 class="total-title">Total payment:</h6>
-            <span class="amount"> $0 </span>
+            <span class="amount"> ${{getTotalPrice()}} </span>
           </div>
         </div>
       </div>
