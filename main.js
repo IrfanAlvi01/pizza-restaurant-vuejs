@@ -66,6 +66,14 @@ Vue.createApp({
           calories: "800 kcal",
           fats: "50 g",
         },
+        {
+          id: 9,
+          image: "pizza-7.png",
+          name: "MARE E MONTI LITE",
+          price: 55,
+          calories: "800 kcal",
+          fats: "50 g",
+        },
       ],
 
       cart: [],
