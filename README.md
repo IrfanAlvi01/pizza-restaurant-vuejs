@@ -20,6 +20,9 @@ This project covers the following Vue.js basics:
 
 Clone the repository and explore the project:
 
+## Preview
+Demo [https://irfanalvi01.github.io/pizza-restaurant-vuejs/]
+
 ```bash
 git clone https://github.com/IrfanAlvi01/pizza-restaurant-vuejs.git
 cd pizza-restaurant-vuejs
