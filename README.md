@@ -4,9 +4,8 @@ This is a basic Vue.js project for a Pizza Restaurant, designed for Command Line
 
 ## Project Overview
 
-- **src/components:** Vue components for different parts of the application.
-- **src/views:** Vue views representing pages (Homepage, Menu, Contact).
-- **src/App.vue:** Main application component.
+- **index.html:** Vue views representing pages (single page site).
+- **style.css:** Contains all styles used in this project.
 - **src/main.js:** Entry point of the application.
 
 ## Vue.js Basics
